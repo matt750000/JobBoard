@@ -1,0 +1,10 @@
+api.jobBoard.wip {
+    tls internal
+
+    reverse_proxy localhost:8000
+}
+
+# Redirection HTTP vers HTTPS
+http://api.jobBoard.wip {
+    redir https://api.jobBoard.wip{uri}
+}
